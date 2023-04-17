@@ -6,8 +6,14 @@ Varfolomeeva Viktoria
 """
 import RU_LOCAL as RU
 
-t_1, t_2, t_3, t_4, t_5, t_6, t_7, t_8, t_9 = 0, 0, 0, 0, 0, 0, 0, 0, 0
+t_1, t_2, t_3, t_4, t_5, t_6, t_7, t_8, t_9, tax = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+
 def non_resident():
+    global t_7
+    global t_8
+    global t_9
+    global tax
     ans_16 = input(RU.QUESTION_16).lower()
     if ans_16 == 'да':
         ans_17 = input(RU.QUESTION_17).lower()
@@ -53,13 +59,16 @@ def non_resident():
             t_8 = ans_32 * 0.3
         else:
             t_8 = 0
+        tax = t_7 + t_8 + t_9
+        return tax
+
 
 ans_1 = input(RU.QUESTION_1).lower()
 if ans_1 == 'да':
     ans_2 = input(RU.QUESTION_2).lower()
     if ans_2 == 'да':
         print(RU.CONCLUSION_1)
-        non_resident()
+        t = non_resident()
     else:
         print(RU.CONCLUSION_2)
         ans_3 = float(input(RU.QUESTION_3))
@@ -104,11 +113,6 @@ if ans_1 == 'да':
         else:
             t_6 = 0
 else:
-    non_resident()
-taxes = t_1 + t_2 + t_3 + t_4 + t_5 + t_6 + t_7 + t_8 + t_9
+    tax = non_resident()
+taxes = t_1 + t_2 + t_3 + t_4 + t_5 + t_6 + tax
 print(RU.QUESTION_33, taxes)
-
-
-
-
-
