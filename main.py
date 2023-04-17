@@ -85,10 +85,22 @@ if ans_1 == 'да':
             t_2 = ans_4 * 0.15
         else:
             t_2 = 0
-        ans_5 = float(input(RU.QUESTION_5))
-        t_3 = 0.13 * ans_5
-        ans_6 = float(input(RU.QUESTION_6))
-        t_4 = 0.13 * ans_6
+        ans_5 = input(RU.QUESTION_5).lower()
+        if ans_5 == 'да':
+            ans_5_2 = float(input(RU.QUESTION_5_2))
+            t_3 = 0.13 * ans_5_2
+        else:
+            t_3 = 0
+        ans_6 = input(RU.QUESTION_6).lower()
+        if ans_6 == 'да':
+            ans_6_2 = input(RU.QUESTION_6_2).lower()
+            if ans_6_2 == 'да':
+                t_4 = 0
+            else:
+                ans_6_3 = float(input(RU.QUESTION_6_3))
+                t_4 = 0.13 * ans_6_3
+        else:
+            t_4 = 0
         ans_7 = input(RU.QUESTION_7).lower()
         if ans_7 == 'да':
             ans_8 = input(RU.QUESTION_8).lower()
