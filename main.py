@@ -6,11 +6,60 @@ Varfolomeeva Viktoria
 """
 import RU_LOCAL as RU
 
+t_1, t_2, t_3, t_4, t_5, t_6, t_7, t_8, t_9 = 0, 0, 0, 0, 0, 0, 0, 0, 0
+def non_resident():
+    ans_16 = input(RU.QUESTION_16).lower()
+    if ans_16 == 'да':
+        ans_17 = input(RU.QUESTION_17).lower()
+        if ans_17 == 'да':
+            ans_18 = float(input(RU.QUESTION_18))
+        else:
+            ans_18 = 0
+        ans_19 = input(RU.QUESTION_19).lower()
+        if ans_19 == 'да':
+            ans_20 = float(input(RU.QUESTION_20))
+        else:
+            ans_20 = 0
+        ans_21 = input(RU.QUESTION_21).lower()
+        if ans_21 == 'да':
+            ans_22 = float(input(RU.QUESTION_22))
+        else:
+            ans_22 = 0
+        ans_23 = input(RU.QUESTION_23).lower()
+        if ans_23 == 'да':
+            ans_24 = float(input(RU.QUESTION_24))
+        else:
+            ans_24 = 0
+        ans_25 = input(RU.QUESTION_25).lower()
+        if ans_25 == 'да':
+            ans_26 = float(input(RU.QUESTION_26))
+        else:
+            ans_26 = 0
+        ans_27 = input(RU.QUESTION_27).lower()
+        if ans_27 == 'да':
+            ans_28 = float(input(RU.QUESTION_28))
+        else:
+            ans_28 = 0
+        t_7 = (ans_18 + ans_20 + ans_22 + ans_24 + ans_26 + ans_28) * 0.13
+        ans_29 = input(RU.QUESTION_29).lower()
+        if ans_29 == 'да':
+            ans_30 = float(input(RU.QUESTION_30))
+            t_8 = ans_30 * 0.3
+        else:
+            t_8 = 0
+        ans_31 = input(RU.QUESTION_31)
+        if ans_31 == 'да':
+            ans_32 = float(input(RU.QUESTION_32))
+            t_8 = ans_32 * 0.3
+        else:
+            t_8 = 0
+
 ans_1 = input(RU.QUESTION_1).lower()
 if ans_1 == 'да':
     ans_2 = input(RU.QUESTION_2).lower()
     if ans_2 == 'да':
         print(RU.CONCLUSION_1)
+        non_resident()
     else:
         print(RU.CONCLUSION_2)
         ans_3 = float(input(RU.QUESTION_3))
@@ -54,8 +103,10 @@ if ans_1 == 'да':
         t_6 = (ans_13 + ans_14 + ans_15) * 0.13
     else:
         t_6 = 0
-print(t_1 + t_2 + t_3 + t_4 + t_5 + t_6)
-
+else:
+    non_resident()
+taxes = t_1 + t_2 + t_3 + t_4 + t_5 + t_6 + t_7 + t_8 + t_9
+print(RU.QUESTION_33, taxes)
 
 
 
