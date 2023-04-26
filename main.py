@@ -2,7 +2,7 @@
 Title
 Group:
 Sineokaya Anastasia 60
-Varfolomeeva Viktoria
+Varfolomeeva Viktoria 55
 """
 import RU_LOCAL as RU
 
