@@ -1,7 +1,7 @@
 """
 Title
 Group:
-Sineokaya Anastasia
+Sineokaya Anastasia 60
 Varfolomeeva Viktoria
 """
 import RU_LOCAL as RU
