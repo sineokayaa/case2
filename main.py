@@ -15,46 +15,46 @@ def non_resident():
     global t_9
     global tax
     ans_16 = input(RU.QUESTION_16).lower()
-    if ans_16 == 'да':
+    if ans_16 == RU.YES:
         ans_17 = input(RU.QUESTION_17).lower()
-        if ans_17 == 'да':
+        if ans_17 == RU.YES:
             ans_18 = float(input(RU.QUESTION_18))
         else:
             ans_18 = 0
         ans_19 = input(RU.QUESTION_19).lower()
-        if ans_19 == 'да':
+        if ans_19 == RU.YES:
             ans_20 = float(input(RU.QUESTION_20))
         else:
             ans_20 = 0
         ans_21 = input(RU.QUESTION_21).lower()
-        if ans_21 == 'да':
+        if ans_21 == RU.YES:
             ans_22 = float(input(RU.QUESTION_22))
         else:
             ans_22 = 0
         ans_23 = input(RU.QUESTION_23).lower()
-        if ans_23 == 'да':
+        if ans_23 == RU.YES:
             ans_24 = float(input(RU.QUESTION_24))
         else:
             ans_24 = 0
         ans_25 = input(RU.QUESTION_25).lower()
-        if ans_25 == 'да':
+        if ans_25 == RU.YES:
             ans_26 = float(input(RU.QUESTION_26))
         else:
             ans_26 = 0
         ans_27 = input(RU.QUESTION_27).lower()
-        if ans_27 == 'да':
+        if ans_27 == RU.YES:
             ans_28 = float(input(RU.QUESTION_28))
         else:
             ans_28 = 0
         t_7 = (ans_18 + ans_20 + ans_22 + ans_24 + ans_26 + ans_28) * 0.13
         ans_29 = input(RU.QUESTION_29).lower()
-        if ans_29 == 'да':
+        if ans_29 == RU.YES:
             ans_30 = float(input(RU.QUESTION_30))
             t_8 = ans_30 * 0.3
         else:
             t_8 = 0
         ans_31 = input(RU.QUESTION_31)
-        if ans_31 == 'да':
+        if ans_31 == RU.YES:
             ans_32 = float(input(RU.QUESTION_32))
             t_8 = ans_32 * 0.3
         else:
@@ -64,9 +64,9 @@ def non_resident():
 
 
 ans_1 = input(RU.QUESTION_1).lower()
-if ans_1 == 'да':
+if ans_1 == RU.YES:
     ans_2 = input(RU.QUESTION_2).lower()
-    if ans_2 == 'да':
+    if ans_2 == RU.YES:
         print(RU.CONCLUSION_1)
         t = non_resident()
     else:
@@ -86,15 +86,15 @@ if ans_1 == 'да':
         else:
             t_2 = 0
         ans_5 = input(RU.QUESTION_5).lower()
-        if ans_5 == 'да':
+        if ans_5 == RU.YES:
             ans_5_2 = float(input(RU.QUESTION_5_2))
             t_3 = 0.13 * ans_5_2
         else:
             t_3 = 0
         ans_6 = input(RU.QUESTION_6).lower()
-        if ans_6 == 'да':
+        if ans_6 == RU.YES:
             ans_6_2 = input(RU.QUESTION_6_2).lower()
-            if ans_6_2 == 'да':
+            if ans_6_2 == RU.YES:
                 t_4 = 0
             else:
                 ans_6_3 = float(input(RU.QUESTION_6_3))
@@ -102,9 +102,9 @@ if ans_1 == 'да':
         else:
             t_4 = 0
         ans_7 = input(RU.QUESTION_7).lower()
-        if ans_7 == 'да':
+        if ans_7 == RU.YES:
             ans_8 = input(RU.QUESTION_8).lower()
-            if ans_8 == 'да':
+            if ans_8 == RU.YES:
                 ans_9 = int(input(RU.QUESTION_9))
                 if ans_9 >= 2:
                     t_5 = 0
@@ -117,7 +117,7 @@ if ans_1 == 'да':
         else:
             t_5 = 0
         ans_12 = input(RU.QUESTION_12).lower()
-        if ans_12 == 'да':
+        if ans_12 == RU.YES:
             ans_13 = float(input(RU.QUESTION_13))
             ans_14 = float(input(RU.QUESTION_14))
             ans_15 = float(input(RU.QUESTION_15))
@@ -127,4 +127,4 @@ if ans_1 == 'да':
 else:
     tax = non_resident()
 taxes = t_1 + t_2 + t_3 + t_4 + t_5 + t_6 + tax
-print(RU.QUESTION_33, taxes)
+print(RU.QUESTION_33, round(taxes, 2))
